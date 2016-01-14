@@ -1,2 +1,2 @@
-dependencies: /Users/sj1/Desktop/项目Test/testDemo/testDemo/main.m \
-  /Users/sj1/Desktop/项目Test/testDemo/testDemo/AppDelegate.h
+dependencies: /Users/sj1/Desktop/testDemo/testDemo/main.m \
+  /Users/sj1/Desktop/testDemo/testDemo/AppDelegate.h

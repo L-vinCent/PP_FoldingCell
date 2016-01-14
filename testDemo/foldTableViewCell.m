@@ -8,6 +8,7 @@
 
 #import "foldTableViewCell.h"
 
+
 //动画时间
 
 //static const NSTimeInterval KDurtion=2.99;
@@ -15,28 +16,49 @@
 {
     NSMutableArray *animationItemViews;
     UIColor *backViewColor;
+    foldTapBlock tempBlock;
 }
 @synthesize containerView;
 @synthesize foregroundView;
+@synthesize coverImageView;
+
 - (void)awakeFromNib {
+    
+    NSLog(@"awakeFromNib");
     // Initialization code
     foregroundView.layer.cornerRadius=10;
     foregroundView.layer.masksToBounds=YES;
-    backViewColor=[UIColor lightGrayColor];
-    
+
+    backViewColor=[UIColor colorWithRed:0.9686 green:0.9333 blue:0.9686 alpha:1.0];
     [self configureDefaultState];
     animationItemViews =[self createAnimationItemView];
 //    
-    for (UIView  *w in animationItemViews) {
-        NSLog(@"===================%@",[w description]);
-    }
+//    for (UIView  *w in animationItemViews) {
+//        NSLog(@"===================%@",[w description]);
+//    }
     self.selectionStyle=UITableViewCellSelectionStyleNone;
     
+    
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImageViewToFriendDetailView:)];
+    coverImageView.userInteractionEnabled=YES;
+    [coverImageView addGestureRecognizer:tap];
+}
+
+-(void)tapImageViewToFriendDetailView:(UITapGestureRecognizer *)sender
+{
+    if (tempBlock) {
+        tempBlock();
+    }
+}
+
+-(void)fold_imageTap:(foldTapBlock)block
+{
+    tempBlock=block;
 }
 
 -(NSMutableArray *)durationSequence
 {
-    NSMutableArray *durationArray=[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:0.39],[NSNumber numberWithFloat:0.26],[NSNumber numberWithFloat:0.26], nil];
+    NSMutableArray *durationArray=[NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:0.35],[NSNumber numberWithFloat:0.23],[NSNumber numberWithFloat:0.23], nil];
     NSMutableArray *durtions=[NSMutableArray array];
     for (int index=0; index<containerView.subviews.count-1; index++) {
         
@@ -129,12 +151,12 @@
         if (tempView.tag==0) {
             
             firstItemView=(RotatedView *)tempView;
-            firstItemView.layer.masksToBounds=NO;
+           // firstItemView.layer.masksToBounds=NO;
         }
         
         float value=(delay-[[durations lastObject] floatValue] *1.5);
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(value* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            firstItemView.layer.masksToBounds =YES;
+//            firstItemView.layer.masksToBounds =YES;
 
         });
         
@@ -162,16 +184,31 @@
         delay+=duration;
 
     }
-    RotatedView *firstItemView;
-    for (UIView *view in containerView.subviews) {
+       for (UIView *view in containerView.subviews) {
         if (view.tag==0) {
-           firstItemView=(RotatedView*)view;
+            RotatedView *firstItemView=(RotatedView*)view;
             firstItemView.layer.masksToBounds=YES;
+            UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:firstItemView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10,10)];
+            CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+            maskLayer.frame = self.bounds;
+            maskLayer.path = maskPath.CGPath;
+            firstItemView.layer.mask = maskLayer;
+        }
+        else if(view.tag==3)
+        {
+             RotatedView *lastItemView=(RotatedView*)view;
+            lastItemView.layer.masksToBounds=YES;
+            UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:lastItemView.bounds byRoundingCorners:UIRectCornerBottomRight | UIRectCornerBottomLeft cornerRadii:CGSizeMake(10, 10)];
+            CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+            maskLayer.frame = self.bounds;
+            maskLayer.path = maskPath.CGPath;
+            lastItemView.layer.mask = maskLayer;
+
         }
     }
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)([durtions[0] floatValue] * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        firstItemView.layer.masksToBounds=NO;
+        //firstItemView.layer.masksToBounds=NO;
     });
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -199,8 +236,8 @@
         }
     }
     
-    firstItemView.layer.cornerRadius=foregroundView.layer.cornerRadius;
-    firstItemView.layer.masksToBounds=YES;
+//    firstItemView.layer.cornerRadius=foregroundView.layer.cornerRadius;
+//    firstItemView.layer.masksToBounds=YES;
     
     //设置外层图片属性
     foregroundView.layer.anchorPoint=CGPointMake(0.5,1);
@@ -214,7 +251,7 @@
         
         if ([constraint.identifier isEqualToString:@"yPosition"]) {
             
-            NSLog(@"----%@",constraint.description);
+//            NSLog(@"----%@",constraint.description);
            
             constraint.constant -= [constraint.firstItem layer].bounds.size.height/ 2;
             [constraint.firstItem layer].anchorPoint=CGPointMake(0.5, 0);
@@ -232,7 +269,7 @@
                 RotatedView *tempView=(RotatedView *)s;
                 [previusView addBackViewHeight:tempView.bounds.size.height color:backViewColor];
                 previusView=tempView;
-//                NSLog(@"%d",tempView.tag);
+//
                 
             }
           

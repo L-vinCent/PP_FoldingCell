@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F34911F1C449375008FA28B /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F34911E1C449375008FA28B /* login_background.png */; };
+		5F3491211C44A539008FA28B /* dots.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F3491201C44A539008FA28B /* dots.png */; };
+		5F3491231C44AC88008FA28B /* main_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F3491221C44AC88008FA28B /* main_gray.png */; };
+		5F3491251C44AD22008FA28B /* 未标题-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F3491241C44AD22008FA28B /* 未标题-2.png */; };
+		5F9F57881C46284200645AEF /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F9F57871C46284200645AEF /* main_background.png */; };
+		5F9F578C1C46344A00645AEF /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F578A1C46344A00645AEF /* secondViewController.m */; };
+		5F9F578D1C46344A00645AEF /* secondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9F578B1C46344A00645AEF /* secondViewController.xib */; };
+		5F9F57901C46397000645AEF /* DSLTransitionFromSecondToFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F578F1C46397000645AEF /* DSLTransitionFromSecondToFirst.m */; };
+		5F9F57931C46482300645AEF /* DSLTransitionFromFirstToSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9F57921C46482300645AEF /* DSLTransitionFromFirstToSecond.m */; };
 		5FAE07FA1C3CB822005BB243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE07F91C3CB822005BB243 /* main.m */; };
 		5FAE07FD1C3CB822005BB243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE07FC1C3CB822005BB243 /* AppDelegate.m */; };
 		5FAE08001C3CB822005BB243 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE07FF1C3CB822005BB243 /* ViewController.m */; };
@@ -42,6 +51,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F34911E1C449375008FA28B /* login_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_background.png; sourceTree = "<group>"; };
+		5F3491201C44A539008FA28B /* dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dots.png; sourceTree = "<group>"; };
+		5F3491221C44AC88008FA28B /* main_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_gray.png; sourceTree = "<group>"; };
+		5F3491241C44AD22008FA28B /* 未标题-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未标题-2.png"; sourceTree = "<group>"; };
+		5F9F57871C46284200645AEF /* main_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_background.png; sourceTree = "<group>"; };
+		5F9F57891C46344A00645AEF /* secondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
+		5F9F578A1C46344A00645AEF /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
+		5F9F578B1C46344A00645AEF /* secondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = secondViewController.xib; sourceTree = "<group>"; };
+		5F9F578E1C46397000645AEF /* DSLTransitionFromSecondToFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLTransitionFromSecondToFirst.h; sourceTree = "<group>"; };
+		5F9F578F1C46397000645AEF /* DSLTransitionFromSecondToFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLTransitionFromSecondToFirst.m; sourceTree = "<group>"; };
+		5F9F57911C46482300645AEF /* DSLTransitionFromFirstToSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLTransitionFromFirstToSecond.h; sourceTree = "<group>"; };
+		5F9F57921C46482300645AEF /* DSLTransitionFromFirstToSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLTransitionFromFirstToSecond.m; sourceTree = "<group>"; };
 		5FAE07F51C3CB822005BB243 /* testDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAE07F91C3CB822005BB243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FAE07FB1C3CB822005BB243 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +118,18 @@
 		5FAE07EC1C3CB821005BB243 = {
 			isa = PBXGroup;
 			children = (
+				5F9F57911C46482300645AEF /* DSLTransitionFromFirstToSecond.h */,
+				5F9F57921C46482300645AEF /* DSLTransitionFromFirstToSecond.m */,
+				5F9F578E1C46397000645AEF /* DSLTransitionFromSecondToFirst.h */,
+				5F9F578F1C46397000645AEF /* DSLTransitionFromSecondToFirst.m */,
+				5F9F57891C46344A00645AEF /* secondViewController.h */,
+				5F9F578A1C46344A00645AEF /* secondViewController.m */,
+				5F9F578B1C46344A00645AEF /* secondViewController.xib */,
+				5F9F57871C46284200645AEF /* main_background.png */,
+				5F3491241C44AD22008FA28B /* 未标题-2.png */,
+				5F3491221C44AC88008FA28B /* main_gray.png */,
+				5F3491201C44A539008FA28B /* dots.png */,
+				5F34911E1C449375008FA28B /* login_background.png */,
 				5FEBEC3A1C3F5161008770E9 /* image.png */,
 				5FEBEC321C3F503F008770E9 /* RotatedView.h */,
 				5FEBEC331C3F503F008770E9 /* RotatedView.m */,
@@ -268,11 +301,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F3491251C44AD22008FA28B /* 未标题-2.png in Resources */,
 				5FAE08081C3CB822005BB243 /* LaunchScreen.storyboard in Resources */,
+				5F3491211C44A539008FA28B /* dots.png in Resources */,
 				5FB0F5FC1C3E4F30007A3000 /* 9885883_222259288000_2.jpg in Resources */,
 				5FAE08051C3CB822005BB243 /* Assets.xcassets in Resources */,
 				5FAE08031C3CB822005BB243 /* Main.storyboard in Resources */,
+				5F3491231C44AC88008FA28B /* main_gray.png in Resources */,
+				5F9F57881C46284200645AEF /* main_background.png in Resources */,
 				5FAE08331C3CE31D005BB243 /* u=521190356,2495057524&fm=21&gp=0.jpg in Resources */,
+				5F34911F1C449375008FA28B /* login_background.png in Resources */,
+				5F9F578D1C46344A00645AEF /* secondViewController.xib in Resources */,
 				5FEBEC391C3F507B008770E9 /* foldTableViewCell.xib in Resources */,
 				5FAE082C1C3CB977005BB243 /* image.png in Resources */,
 				5FEBEC3B1C3F5161008770E9 /* image.png in Resources */,
@@ -300,10 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9F57931C46482300645AEF /* DSLTransitionFromFirstToSecond.m in Sources */,
 				5FAE08001C3CB822005BB243 /* ViewController.m in Sources */,
 				5FAE07FD1C3CB822005BB243 /* AppDelegate.m in Sources */,
 				5FEBEC341C3F503F008770E9 /* RotatedView.m in Sources */,
 				5FEBEC381C3F507B008770E9 /* foldTableViewCell.m in Sources */,
+				5F9F578C1C46344A00645AEF /* secondViewController.m in Sources */,
+				5F9F57901C46397000645AEF /* DSLTransitionFromSecondToFirst.m in Sources */,
 				5FAE07FA1C3CB822005BB243 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = testDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.testDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

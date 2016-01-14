@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "foldTableViewCell.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *testTableView;
+
+- (foldTableViewCell *)tableViewCellForThing:(NSIndexPath *)indexPath;
 
 @end
 
